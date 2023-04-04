@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>home</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+<script Language="javaScript">
+	function checkValidation(f)
+	{
+	var uname = f.userid.value;
+	var pass = f.pass.value;
+	var mail = f.email.value;
+	var mob = f.mobile.value;
+	var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var addr = f.address.value;
+	var dob = f.dob.value;
+	var gen = f.cname.value;
+	//var pin = f.pincode.value;
+	var loc = f.location.value;
+	var pic = f.pic.value;
+	var dregex = /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/;
+	if(uname == "")
+	{
+		alert("Plz Enter User Name.");
+		f.userid.focus();
+		return false;
+	}
+	if(!isNaN(uname))
+	{
+		alert("Plz Enter Valid Name.");
+		f.userid.value = "";
+		f.userid.focus();
+		return false;
+	}
+	if(pass == "")
+	{
+		alert("Plz Enter Password.");
+		f.pass.focus();
+		return false;
+	}
+	if(pass.length < 6)
+	{
+		alert("Password should be Minimum 6 characters");
+		f.pass.focus();
+		return false;
+	}
+	if(mail == "")
+	{
+		alert("Plz Enter Email Address.");
+		f.email.focus();
+		return false;
+	}
+	if(!regex.test(mail))
+	{
+		alert("Plz Enter Valid Email Address.");
+		f.email.focus();
+		return false;
+	}
+	if(mob == "")
+	{
+		alert("Plz Enter Mobile Number.");
+		f.mobile.focus();
+		return false;
+	}
+	if(mob.length != 10)
+	{
+		alert("Mobile Number Should be in 10 Digits");
+		f.mobile.focus();
+		return false;
+	}
+	if(isNaN(mob))
+	{
+		alert("Plz Enter valid Mobile Number.");
+		f.mobile.value = "";
+		f.mobile.focus();
+		return false;
+	}
+	if(addr == "")
+	{
+		alert("Plz Enter Address.");
+		f.address.focus();
+		return false;
+	}
+	if(dob == "")
+	{
+		alert("Plz Enter Date of Birth.");
+		f.dob.focus();
+		return false;
+	}
+	if(!dregex.test(dob))
+	{
+		alert("Plz Enter valid Date of Birth (MM/dd/yyyy)");
+		f.dob.focus();
+		return false;
+	}
+	if(gen == 0)
+	{
+		alert("Plz Select Cloud Name.");
+		f.cname.focus();
+		return false;
+	}
+	/*if(pin == "")
+	{
+		alert("Plz Enter Pincode");
+		f.pincode.focus();
+		return false;
+		
+	}
+	if(isNaN(pin))
+	{
+		alert("Plz Enter valid Pic Code");
+		f.pincode.value = "";
+		f.pincode.focus();
+		return false;
+	}
+	if(pin.length < 6)
+	{
+		alert("Pin Code Should be minimum 6 characters");
+		f.pincode.focus();
+		return false;
+	}*/
+	if(loc == "")
+	{
+		alert("Plz Enter Location Information");
+		f.location.focus();
+		return false;
+	}
+	if(!isNaN(loc))
+	{
+		alert("Plz Enter valid Location Information");
+		f.location.focus();
+		return false;
+	}
+	if(pic == "")
+	{
+		alert("Plz Choose Profile Picture from Gallery");
+		f.pic.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body id="body">
+    <!--==========================
+      Header
+    ============================-->
+    <header id="header">
+      <div class="container">
+  
+        <div id="logo" class="pull-left">
+          <h1><a href="#body" class="scrollto">Ho<span>me</span></a></h1>
+        </div>
+  
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">Abstract</a></li>
+            <li><a href="/owner">Data Owner</a></li>
+          <li><a href="/Proxy">Proxy server</a></li>
+          <li><a href="/Cloud">Admin</a></li>
+            <li class="menu-has-children"><a href="">Cloud</a>
+              <ul>
+                <li><a href="#">Amazon S3</a></li>
+                <li><a href="#">Google drive</a></li>
+                <li><a href="#">Apple icloud</a></li>
+                <li><a href="#">Microsoft Azure</a></li>
+              </ul>
+            </li>
+            <li><a href="/Enduser">End user</a></li>
+          </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
+    </header><!-- #header -->
+	<section id="about" class="wow fadeInUp" style="text-align: center;">
+		<div class="col-lg-6 content" style="display: inline-block;">
+		  <div class="content_resize">
+		  <div class="mainbar" style="text-align: justify;">
+			<div class="article">
+           <h2 class="style2">User Registeration </h2>
+          <div class="style1 clr"></div>
+          <p class="style2"> 
+		  <form name="f" action="insertdata1.jsp" method="post" id="" enctype="multipart/form-data" onSubmit="return checkValidation(f);">
+ <ol class="form-list">
+              <li class="form-item">
+                <label for="name">User Name</label>
+                <input id="name" name="userid" class="text" />
+              </li>
+              <li class="form-item">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="pass" class="text" />
+              </li>
+              <li class="form-item">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" class="text" />
+              </li>
+              <li class="form-item">
+                <label for="mobile">Mobile Number</label>
+                <input id="mobile" name="mobile" class="text" />
+              </li>
+              <li class="form-item">
+                <label for="address">Your Address</label>
+                <textarea id="address" name="address" rows="3" cols="50"></textarea>
+              </li>
+              <li class="form-item">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" class="text" />
+              </li>
+          
+              <li class="form-item">
+                <label for="location">Enter Location</label>
+                <input id="loc" name="location" class="text" />
+              </li>
+			   <li class="form-item">
+	
+                <label for="cloudn">Select Cloud Server</label>
+                <select id="s1" name="cname" style="width:480px;" class="text">
+                  <option value="0">--Select--</option>
+                  <option>Google drive</option>
+                  <option>Amazon S3</option>
+				  <option>Microsoft Azure</option>
+				  <option>Apple icloud</option> 
+                </select>
+              </li>
+			  		  
+			   		  
+              <li class="form-item">
+                <span class="style2">
+                <label for="pic">Select Profile Picture</label>
+                </span><span class="style1"><label for="pic"></label>
+                </span>
+                <label for="pic"></label>
+                <input type="file" id="pic" name="pic" class="text" />
+              </li>
+			  <li class="form-item">
+				<input name="submit" type="submit" value="REGISTER" /></li>
+              <ol>
+                <ol>
+                  <ol>
+                    <br />
+					
+                  </ol>
+                </ol>
+              </ol>
+                <div class="clr"></div>
+            </ol>
+</form>
+</p>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
